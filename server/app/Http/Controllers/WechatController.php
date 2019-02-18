@@ -7,7 +7,7 @@ use Socialite;
 
 class WechatController extends Controller
 {
-    public function oauth()
+    public function oauth($code)
     {
         try {
             $accessToken = Socialite::driver('wechat')->getAccessToken($code);
