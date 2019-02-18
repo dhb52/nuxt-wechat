@@ -4,12 +4,14 @@ const config = {
   },
 
   prod: {
+    appBaseUrl: 'http://example.com',
     apiBaseUrl: 'http://example.com/api',
 
     wechatAuthExpireMinutes: 60
   },
 
   dev: {
+    appBaseUrl: 'http://127.0.0.1:8000',
     apiBaseUrl: 'http://127.0.0.1:8000/api',
 
     wechatAuthExpireMinutes: 1,
