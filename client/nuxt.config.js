@@ -32,7 +32,11 @@ module.exports = {
   /*
   ** Plugins to load before mounting the App
   */
-  plugins: [],
+  plugins: [
+    '@/plugins/wechatAuth',
+    '@/plugins/lsCache',
+    '@/plugins/wechatShare'
+  ],
 
   /*
   ** Nuxt.js modules
@@ -46,6 +50,7 @@ module.exports = {
   */
   axios: {
     // See https://github.com/nuxt-community/axios-module#options
+    baseURL: envConfig.apiBaseUrl
   },
 
   /*
@@ -56,14 +61,17 @@ module.exports = {
     ** You can extend webpack config here
     */
     extend(config, ctx) {
-      // Run ESLint on save
       if (ctx.isDev && ctx.isClient) {
+        // Run ESLint on save
         config.module.rules.push({
           enforce: 'pre',
           test: /\.(js|vue)$/,
           loader: 'eslint-loader',
           exclude: /(node_modules)/
         })
+
+        // Add source-map for debugger
+        config.devtool = '#source-map'
       }
     }
   }
