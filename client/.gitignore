@@ -82,3 +82,6 @@ dist
 
 # Service worker
 sw.*
+
+# env.js
+env.js
