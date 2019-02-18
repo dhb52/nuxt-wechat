@@ -4570,6 +4570,11 @@ lru-cache@^5.1.1:
   dependencies:
     yallist "^3.0.2"
 
+lscache@^1.3.0:
+  version "1.3.0"
+  resolved "http://registry.npm.taobao.org/lscache/download/lscache-1.3.0.tgz#2221fd39f3393d2dfbc6ed2231beb52e11e43396"
+  integrity sha1-IiH9OfM5PS37xu0iMb61LhHkM5Y=
+
 make-dir@^1.0.0:
   version "1.3.0"
   resolved "http://registry.npm.taobao.org/make-dir/download/make-dir-1.3.0.tgz#79c1033b80515bd6d24ec9933e860ca75ee27f0c"
@@ -7703,6 +7708,11 @@ webpackbar@^3.1.5:
     std-env "^2.2.1"
     text-table "^0.2.0"
     wrap-ansi "^4.0.0"
+
+weixin-js-sdk@^1.4.0-test:
+  version "1.4.0-test"
+  resolved "http://registry.npm.taobao.org/weixin-js-sdk/download/weixin-js-sdk-1.4.0-test.tgz#612bbafcc97ad84f5afe6dc84701534cc59fc3ca"
+  integrity sha1-YSu6/Ml62E9a/m3IRwFTTMWfw8o=
 
 which@^1.2.9:
   version "1.3.1"
