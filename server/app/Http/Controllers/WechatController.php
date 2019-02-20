@@ -7,6 +7,7 @@ use Socialite;
 
 class WechatController extends Controller
 {
+    // type1: Socialite
     public function oauth($code)
     {
         try {
@@ -18,6 +19,21 @@ class WechatController extends Controller
             return abort(401, $e->getMessage());
         }
     }
+
+    // type2: laravel-wechat
+    // public function oauth($code)
+    // {
+    //     try {
+    //         $oauth = app('wechat.official_account')->oauth;
+
+    //         $accessToken = $oauth->getAccessToken($code);
+    //         $user        = $oauth->user($accessToken);
+
+    //         return $user;
+    //     } catch (\Exception $e) {
+    //         return abort(401, $e->getMessage());
+    //     }
+    // }
 
     public function oauthMock()
     {
